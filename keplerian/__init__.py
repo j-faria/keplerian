@@ -8,4 +8,4 @@ __version__ = '0.1.0'
 
 __all__ = ['keplerian']
 
-from keplerian import keplerian
+from .keplerian import keplerian
