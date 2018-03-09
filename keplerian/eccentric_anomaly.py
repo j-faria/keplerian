@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import numpy as np
 pi = np.pi
-from numba import jit, vectorize, float64
 
 DERROR = 1e-10
 
