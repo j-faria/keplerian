@@ -17,7 +17,10 @@ A package to calculate the Keplerian function
 Features
 --------
 
-- It calculates Keplerian functions...
+- It calculates Keplerian functions, that is, wiggly things like this:
+
+![](tests/baseline/test_complicated_fig.png)
+
 
 Credits
 -------
