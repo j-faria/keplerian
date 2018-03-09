@@ -8,8 +8,6 @@ def ecc_anomaly1(M, e):
     # catch special case
     if isinstance(e, float) and e == 0.0:
         return M
-    if isinstance(M, float) and M == 0.0:
-        return np.zeros_like(e)
 
     M = np.atleast_1d(M)
     E0 = M; E = M
