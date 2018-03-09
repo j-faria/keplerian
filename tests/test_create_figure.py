@@ -14,7 +14,6 @@ import numpy as np
 from keplerian import keplerian
 
 
-# @pytest.mark.skip(reason="pytest-mpl has problems on Travis...")
 @pytest.mark.mpl_image_compare
 def test_simple_fig():
     """ Simple figure """
@@ -27,7 +26,6 @@ def test_simple_fig():
     return fig
 
 
-# @pytest.mark.skip(reason="pytest-mpl has problems on Travis...")
 @pytest.mark.mpl_image_compare
 def test_complicated_fig():
     """ Not so simple figure """
