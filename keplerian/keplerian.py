@@ -3,6 +3,8 @@
 import numpy as np 
 pi = np.pi
 
+from .eccentric_anomaly import ecc_anomaly1 as ecc_anomaly
+
 def keplerian(time, p, k, ecc, omega, t0, vsys):
     vel = np.zeros_like(time)
     p, k, ecc, omega, t0 = np.atleast_1d(p, k, ecc, omega, t0)
@@ -18,18 +20,3 @@ def keplerian(time, p, k, ecc, omega, t0, vsys):
 def true_anomaly(E, e):
     return 2. * np.arctan( np.sqrt((1.+e)/(1.-e)) * np.tan(E/2.))
 
-def ecc_anomaly(M, e):
-    M = np.atleast_1d(M)
-    E0 = M; E = M
-    for _ in range(200):
-        g = E0 - e * np.sin(E0) - M
-        gp = 1.0 - e * np.cos(E0)
-        E = E0 - g / gp
-
-        # convergence?
-        if (np.linalg.norm(E - E0, ord=1) <= 1.234e-10): 
-            return E
-        # not yet
-        E0 = E
-    # no convergence, the best estimate
-    return E
