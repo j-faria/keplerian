@@ -12,6 +12,7 @@ A package to calculate the Keplerian function
 
 - Free software: MIT license
 - Documentation: https://keplerian.readthedocs.io.
+- Read more about [planetary orbits in radial velocities](RVorbits.md)
 
 
 Features
